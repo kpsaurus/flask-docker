@@ -1,0 +1,18 @@
+html,body{
+    background-color:#367536;
+}
+
+.title {
+    color: white;
+    font-style: oblique;
+    text-align: center;
+}
+.welcome-box{
+    text-align: center;
+}
+
+.welcome-box > p{
+    font-size: x-large;
+    font-family: monospace;
+    color: chartreuse;
+}

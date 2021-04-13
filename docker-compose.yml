@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: Flask
+    build: ./app
+    volumes:
+      - ./app:/app
+    ports:
+      - "5000:5000"
+    restart: on-failure
+  nginx:
+    container_name: Nginx
+    build: ./nginx
+    restart: on-failure
+    volumes:
+      - ./app/static:/static
+    ports:
+      - "80:80"
+    depends_on:
+      - app
